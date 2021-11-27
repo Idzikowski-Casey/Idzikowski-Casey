@@ -11,7 +11,7 @@ I have over 2 years of working experience designing and developing full-stack we
 - 🤔 I’m looking for help with professional development.
 - 📫 How to reach me: idzikowski.casey@gmail.com
 - 😄 Pronouns: He/Him
-- ⚡ Fun fact: My undergraduate major was Geolog 🌋
+- ⚡ Fun fact: My undergraduate major was Geology 🌋
 
 <h2>Technologies I use</h2>
 <p>
