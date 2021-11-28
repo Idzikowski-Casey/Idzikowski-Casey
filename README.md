@@ -1,7 +1,7 @@
 <img width="1262" alt="github-header" src="https://user-images.githubusercontent.com/65414051/143598348-2dcfde16-a10f-4d90-936a-3dbe08d06939.png">
 <p><a href="https://www.linkedin.com/in/casey-idzikowski-742858108/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" height=25></a> <a href="https://www.instagram.com/casey_idz/"><img src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white" height=25></a></a></p>
 
-## Hello 👋
+## [Hello 👋](https://idzikowski-casey.github.io/personal-site/#home)
 
 I have over 2 years of working experience designing and developing full-stack web applications. My recent work with the [Macrostrat Group](https://macrostrat.org/), has been in designing and creating informatic systems, data acquisition interfaces, and improving application-to-database data pipeline infrastructure. 
 
