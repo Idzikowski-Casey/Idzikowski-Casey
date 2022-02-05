@@ -1,0 +1,24 @@
+.letter-box {
+  height: 50px;
+  width: 50px;
+  border-style: solid;
+  border-color: rgb(195, 195, 195);
+  border-radius: 3px;
+  margin: 5px;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letters {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+.app-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

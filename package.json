@@ -8,11 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "10.2.3",
+    "next": "^12.0.10",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sass": "^1.49.7"
   },
   "devDependencies": {
+    "@macrostrat/hyper": "^2.0.1",
     "@types/react": "17.0.9",
     "typescript": "4.3.2"
   }
