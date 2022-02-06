@@ -1,14 +1,11 @@
-import { useState, useEffect, KeyboardEvent, useReducer } from "react";
+import { useEffect, KeyboardEvent, useReducer } from "react";
 import { hyperStyled } from "@macrostrat/hyper";
+import { Header } from "./header";
+import { KeyBoard } from "./keyboard";
 import styles from "./wurdle.module.scss";
 import { isAlpha, LetterBox } from "../wurdle";
-import {
-  WurdleState,
-  WurdlerReducer,
-  WurdleDefaultState,
-  WurdleActions,
-  GAME_STATUS,
-} from "./reducer";
+import { WurdlerReducer, WurdleDefaultState, GAME_STATUS } from "./reducer";
+import { onKeyAction } from "./helpers";
 
 const h = hyperStyled(styles);
 
@@ -19,27 +16,7 @@ export default function Wurdle() {
   const onKeyUp = (e: KeyboardEvent) => {
     const char = e.key.toLocaleLowerCase();
     console.log(state);
-    if (
-      isAlpha(char) &&
-      state.grid[state.current[0]][state.current[1]].letter == null &&
-      state.status == GAME_STATUS.ACTIVE
-    ) {
-      dispatch({ type: "add-letter", letter: char });
-    } else if (char.toLocaleLowerCase() === "backspace") {
-      console.log("delete letter");
-      dispatch({ type: "remove-letter" });
-    } else if (
-      char === "enter" &&
-      state.grid[state.current[0]][state.current[1]].letter != null
-    ) {
-      if (state.current[0] == 5) {
-        console.log("game over");
-        dispatch({ type: "update-status", status: GAME_STATUS.LOSE });
-      } else {
-        console.log("enter has been pressed");
-        dispatch({ type: "check-current" });
-      }
-    }
+    onKeyAction(char, dispatch, state);
   };
 
   useEffect(() => {
@@ -50,19 +27,21 @@ export default function Wurdle() {
   }, [state.current]);
 
   return h("div.app-container", [
+    h(Header),
     h("div.letters", { onKeyUp: onKeyUp }, [
       state.grid.map((row, j) => {
-        return row.map((l, i) => {
-          return h(LetterBox, {
-            key: i,
-            letter: l,
-          });
-        });
+        return h("div.row", [
+          row.map((l, i) => {
+            return h(LetterBox, {
+              key: i,
+              letter: l,
+              order: i,
+              status: state.status,
+            });
+          }),
+        ]);
       }),
     ]),
-    h("div.status", [
-      h.if(state.status == GAME_STATUS.LOSE)("h2.lose", ["YOU LOST! Bummer"]),
-      h.if(state.status == GAME_STATUS.WIN)("h2.win", ["YOU Won! Woohoo"]),
-    ]),
+    h(KeyBoard, { state, dispatch }),
   ]);
 }

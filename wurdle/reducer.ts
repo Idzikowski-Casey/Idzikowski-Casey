@@ -1,4 +1,4 @@
-import { CheckRow } from ".";
+import { CheckRow , AddUsed} from "./helpers";
 
 export enum GAME_STATUS {
   ACTIVE,
@@ -13,11 +13,16 @@ export enum BoxColor{
     GREEN = "green"
 }
 
+export interface UsedLetter {
+    [letter: string]: BoxColor
+}
+
 export interface WurdleState {
   grid: LetterBoxI[][]; // len 25
   current: [i:number, j:number]; // keep track of last empty space
   word: string;
   status: GAME_STATUS;
+  used: UsedLetter | {}
 }
 
 export interface LetterBoxI{
@@ -35,6 +40,7 @@ export const WurdleDefaultState: WurdleState = {
   current: [0,0],
   word: "which",
   status: GAME_STATUS.ACTIVE,
+  used: {}
 };
 
 type ADD_LETTER = { type: "add-letter"; letter: string };
@@ -87,12 +93,14 @@ export const WurdlerReducer = (state: WurdleState, action: WurdleActions) => {
       ///check current against word
       const grid_ = JSON.parse(JSON.stringify(state.grid));
       const {letters: row, status} = CheckRow(state.word, grid_[state.current[0]])
+      const used = AddUsed(row, state.used)
       grid_[state.current[0]] = row
       return {
         ...state,
         current: [state.current[0]+1, 0],
         grid: grid_,
-        status
+        status,
+        used
       };
     default:
       console.error("I don't know what you want FROM ME!");

@@ -1,24 +1,170 @@
 .letter-box {
-  height: 50px;
-  width: 50px;
+  width: 100%;
+  height: 100%;
   border-style: solid;
-  border-color: rgb(195, 195, 195);
-  border-radius: 3px;
+  border-color: #d3d6da;
+  border-width: 2px;
   margin: 5px;
-  font-size: 45px;
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
+  transition: transform 0.8s;
 }
 
 .letters {
-  display: flex;
-  flex-wrap: wrap;
-  width: 300px;
+  width: 350px;
+  height: 420px;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 5px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.app-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.has-letter {
+  animation: quick-scale 0.05s ease-in-out 0s 1;
+  border-color: #787c7e;
+}
+
+@keyframes quick-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+$colors: (
+  "gray": #787c7e,
+  "green": #6aaa64,
+  "yellow": #c9b458,
+);
+
+@each $name, $color in $colors {
+  @keyframes reveal-#{$name} {
+    0% {
+      transform: rotateX(0deg);
+      -webkit-transform: rotateX(0deg);
+      background-color: white;
+    }
+    50% {
+      transform: rotateX(90deg);
+      -webkit-transform: rotateX(90deg);
+    }
+    100% {
+      transform: rotateX(0deg);
+      -webkit-transform: rotateX(0deg);
+      background-color: $color;
+      border-color: $color;
+      color: white;
+    }
+  }
+}
+
+@keyframes win-jump {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.won {
+  animation: win-jump 0.5s ease-in-out 3s 1;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+
+.gray {
+  animation: reveal-gray 0.5s 1 ease-in-out forwards;
+}
+
+.green {
+  animation: reveal-green 0.5s 1 ease-in-out forwards;
+}
+.white {
+  background-color: white !important;
+}
+
+.yellow {
+  animation: reveal-yellow 0.5s 1 ease-in-out forwards;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.header {
+  border-bottom: solid #d3d6da 1px;
+  width: 43vw;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  h1 {
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    pointer-events: none;
+    margin: 2px;
+  }
+}
+
+.key {
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: bold;
+  border: 0;
+  padding: 0 13px;
+  margin: 0 6px 0 0;
+  height: 58px;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  background-color: #d3d6da;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 48px;
+  text-transform: uppercase;
+}
+.keyboard {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.key-row {
+  display: flex;
+  margin: 0 auto 8px;
+  touch-action: manipulation;
+}
+
+.icon {
+  color: map-get($map: $colors, $key: "gray");
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
 }

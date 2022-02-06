@@ -1,4 +1,11 @@
-import { LetterBoxI, BoxColor, GAME_STATUS } from "./reducer";
+import {
+  LetterBoxI,
+  BoxColor,
+  GAME_STATUS,
+  WurdleActions,
+  WurdleState,
+  UsedLetter,
+} from "./reducer";
 
 function isAlpha(ch: string): Boolean {
   return /^[A-Z]$/i.test(ch);
@@ -31,4 +38,45 @@ function CheckRow(
   return { letters, status: GAME_STATUS.ACTIVE };
 }
 
-export { isAlpha, CheckRow };
+function AddUsed(row: LetterBoxI[], used: UsedLetter) {
+  row.forEach((l) => {
+    used[l.letter] = l.color;
+  });
+  return used;
+}
+
+const keys: string[][] = [
+  ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
+  ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
+  ["enter", "z", "x", "c", "v", "b", "n", "m", "delete"],
+];
+
+const onKeyAction = (
+  char: string,
+  dispatch: (action: WurdleActions) => void,
+  state: WurdleState
+) => {
+  if (
+    isAlpha(char) &&
+    state.grid[state.current[0]][state.current[1]].letter == null &&
+    state.status == GAME_STATUS.ACTIVE
+  ) {
+    dispatch({ type: "add-letter", letter: char });
+  } else if (char.toLocaleLowerCase() === "backspace") {
+    console.log("delete letter");
+    dispatch({ type: "remove-letter" });
+  } else if (
+    char === "enter" &&
+    state.grid[state.current[0]][state.current[1]].letter != null
+  ) {
+    if (state.current[0] == 5) {
+      console.log("game over");
+      dispatch({ type: "update-status", status: GAME_STATUS.LOSE });
+    } else {
+      console.log("enter has been pressed");
+      dispatch({ type: "check-current" });
+    }
+  }
+};
+
+export { isAlpha, CheckRow, keys, onKeyAction, AddUsed };
