@@ -3,7 +3,7 @@
 
 ## [Hello 👋](https://idzikowski-casey.github.io/personal-site/#home)
 
-I have over 2 years of working experience designing and developing full-stack web applications. My recent work with the [Macrostrat Group](https://macrostrat.org/), has been in designing and creating informatic systems, data acquisition interfaces, and improving application-to-database data pipeline infrastructure. 
+I have over 2 years of working experience designing and developing full-stack web applications. My recent work with the [Macrostrat Group](https://macrostrat.org/), has been in designing and creating informatic systems, data acquisition interfaces, and improving application-to-database data pipeline infrastructure.
 
 - 🔭 I’m currently working on Macrostrat-Web, Sparrow, Column-Topology
 - 🌱 I’m currently learning algorithms and scalability.
@@ -33,4 +33,3 @@ I have over 2 years of working experience designing and developing full-stack we
 
 <h2>GitHub Stats</h2>
 <p><img src="https://github-readme-stats.vercel.app/api?username=Idzikowski-Casey&amp;show_icons=true" alt="GitHub Stats"></p>
-
