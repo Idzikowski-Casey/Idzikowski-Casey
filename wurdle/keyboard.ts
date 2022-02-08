@@ -1,7 +1,9 @@
 import { hyperStyled } from "@macrostrat/hyper";
 import styles from "./wurdle.module.scss";
+import { IoBackspaceOutline } from "react-icons/io5";
 import { WurdleState, WurdleActions, UsedLetter } from "./reducer";
 import { keys, onKeyAction } from "./helpers";
+import { IconType } from "react-icons/lib";
 
 const h = hyperStyled(styles);
 
@@ -11,7 +13,7 @@ interface keyBoardProps {
 }
 
 interface keyProps {
-  label: string;
+  label: string | IconType;
   onClick: (e: any) => void;
   used: UsedLetter;
 }
@@ -32,12 +34,18 @@ function KeyBoard({ state, dispatch }: keyBoardProps) {
     keys.map((row, i) => {
       return h("div.key-row", { key: i }, [
         row.map((key, j) => {
+          let label = key;
+          if (key == "delete") {
+            label = h(IoBackspaceOutline);
+          }
           const onClick = () => {
             let k = key;
-            if (key == "delete") k = "backspace";
+            if (key == "delete") {
+              k = "backspace";
+            }
             onKeyAction(k, dispatch, state);
           };
-          return h(Key, { key: j, label: key, onClick, used: state.used });
+          return h(Key, { key: j, label: label, onClick, used: state.used });
         }),
       ]);
     }),

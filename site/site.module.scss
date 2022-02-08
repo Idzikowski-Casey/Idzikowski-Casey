@@ -122,24 +122,25 @@ $outline: $pink;
     white-space: pre-wrap;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 590px) {
   .tag-animate {
     position: absolute;
     top: 60%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    width: 100%;
+    animation: flicker 1s infinite;
   }
   .gradient {
     text-align: center;
   }
   .chev-down,
   .title,
-  .subtitle,
-  .tag-animate {
+  .subtitle {
     width: 100%;
     opacity: 1;
     animation: none;
-  }
-  .tag-animate {
-    animation: flicker 1s infinite;
   }
 }
 
@@ -242,7 +243,7 @@ $outline: $pink;
     padding: 50px 100px;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 590px) {
   .contact-me {
     display: block;
   }
@@ -327,9 +328,6 @@ $outline: $pink;
     text-align: center;
     list-style: none;
   }
-}
-
-@media screen and (max-width: 425px) {
   .resume-page {
     padding: 100px 0px;
   }

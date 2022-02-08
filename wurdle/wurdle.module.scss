@@ -168,3 +168,14 @@ $colors: (
   margin: 10px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .header {
+    width: 100vw;
+  }
+  .key {
+    min-width: 20px;
+    font-weight: normal;
+    font-size: 15px;
+  }
+}
