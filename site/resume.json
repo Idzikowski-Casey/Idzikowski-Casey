@@ -1,0 +1,36 @@
+{
+  "education": [
+    {
+      "header": "University of Wisconsin Madison",
+      "subtitle": "B.S Geosciences",
+      "date": "May 2020",
+      "description": "At the University of Wisconsin-Madison, I assisted a then Ph.D. candidate, now Postdoc, in a 6 week long geologic field season in Western Australia. This fieldwork led to 2 years of independent undergraduate research culminating in a poster presentation at Geologic Society of America 2019. Studying geoscience has provided me with a strong interdisciplinary education."
+    }
+  ],
+  "work": [
+    {
+      "header": "Macrostrat, University of Wisconsin Madison",
+      "subtitle": "Associate Research Specialist",
+      "date": "February 2021 - Present",
+      "description": "As an Associate Research Specialist, I am applying my expertise in software development to solving data workflow problems. My responsibilities have grown to include updating existing codebases to industry standards and leading development on data acquisition interfaces and workflows."
+    },
+    {
+      "header": "Macrostrat, University of Wisconsin Madison",
+      "subtitle": "Research Intern",
+      "date": "May 2020 - February 2021",
+      "description": "As a research intern, I built upon my programming knowledge from my previous position. I taught myself JavaScript and React.js to begin frontend development of a lab-data management software called Sparrow, an NSF-funded project. My role as a developer quickly expanded beyond frontend to encompass a python backend Restful API, python-database workflows, and managing/editing a PostgreSQL database."
+    },
+    {
+      "header": "Macrostrat, University of Wisconsin Madison",
+      "subtitle": "Student Worker",
+      "date": "May 2019 - May 2020",
+      "description": "As a Student Worker at the University of Wisconsin Madison, I was tasked with searching for and collecting metadata for geochronological samples processed at the WiscAr lab. In this position, I learned python for data science and performed data manipulations on the dataset I had collected."
+    }
+  ],
+  "skills": {
+    "Languages": ["TypeScript", "Python", "JavaScript", "PostgreSQL", "HTML"],
+    "Frameworks": ["ReactJS", "NextJS", "FastAPI"],
+    "Styling": ["CSS", "SASS", "Stylus"],
+    "Tools": ["GIT", "Docker"]
+  }
+}
