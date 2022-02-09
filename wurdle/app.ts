@@ -3,7 +3,7 @@ import { hyperStyled } from "@macrostrat/hyper";
 import { Header } from "./header";
 import { KeyBoard } from "./keyboard";
 import styles from "./wurdle.module.scss";
-import { isAlpha, LetterBox } from "../wurdle";
+import { LetterBox } from "../wurdle";
 import { WurdlerReducer, WurdleDefaultState, GAME_STATUS } from "./reducer";
 import { onKeyAction } from "./helpers";
 

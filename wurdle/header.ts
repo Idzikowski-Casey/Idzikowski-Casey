@@ -18,7 +18,7 @@ function IconBtn(props: IconBtnProps) {
 export function Header() {
   return h("div.header", [
     h(IconBtn, { icon: h(AiOutlineQuestionCircle), onClick: () => {} }),
-    h("h1", ["WURDLE"]),
+    h("h1", ["Nook's Wurds"]),
     h("div", [
       h(IconBtn, { icon: h(IoPodiumOutline), onClick: () => {} }),
       h(IconBtn, { icon: h(ImCog), onClick: () => {} }),

@@ -40,10 +40,18 @@
   }
 }
 
+$wordle-gray: #787c7e;
+$wordle-green: #6aaa64;
+$wordle-yellow: #c9b458;
+
+$ac-brown: #c48d3f;
+$ac-green: #9dffb0;
+$ac-yellow: #fff563;
+
 $colors: (
-  "gray": #787c7e,
-  "green": #6aaa64,
-  "yellow": #c9b458,
+  "gray": $ac-brown,
+  "green": $ac-green,
+  "yellow": $ac-yellow,
 );
 
 @each $name, $color in $colors {
@@ -62,7 +70,7 @@ $colors: (
       -webkit-transform: rotateX(0deg);
       background-color: $color;
       border-color: $color;
-      color: white;
+      color: rgb(102, 102, 102);
     }
   }
 }
@@ -72,7 +80,7 @@ $colors: (
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(10px);
+    transform: translateY(-10px);
   }
   100% {
     transform: translateY(0px);
@@ -81,6 +89,7 @@ $colors: (
 
 .won {
   animation: win-jump 0.5s ease-in-out 3s 1;
+  animation-delay: 3s;
 }
 
 .row {
@@ -174,8 +183,22 @@ $colors: (
     width: 100vw;
   }
   .key {
-    min-width: 20px;
+    min-width: 25px;
     font-weight: normal;
     font-size: 15px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header {
+    width: 100vw;
+  }
+  .key {
+    padding: 0;
+    min-width: 25px;
+    font-weight: normal;
+    font-size: 15px;
+  }
+  .letters {
+    width: 300px;
   }
 }

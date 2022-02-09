@@ -35,7 +35,7 @@ $pink: #cb4d89;
 .title {
   display: flex;
   align-items: flex-end;
-  animation: type 2s steps(15, end);
+  animation: type 1s steps(15, end);
   text-transform: uppercase;
   font-size: 60px;
 }
@@ -46,8 +46,8 @@ $pink: #cb4d89;
   margin-left: 10px;
   display: inline;
   letter-spacing: 5px;
-  width: 0;
-  animation: type 1s 1s steps(3, end) forwards, flicker 1s 3s infinite;
+  width: 100%;
+  animation: fade-in 0s 1s steps(3, end) forwards, flicker 1s 2.25s infinite;
 }
 
 .subtitle {
@@ -56,7 +56,7 @@ $pink: #cb4d89;
   color: lightgray;
   letter-spacing: 3px;
   width: 0px;
-  animation: type 1.5s 2s steps(40, end) forwards;
+  animation: type 1.5s 1.5s steps(40, end) forwards;
 }
 
 $outline: $pink;
@@ -108,7 +108,7 @@ $outline: $pink;
     color: #fff;
     cursor: pointer !important;
     opacity: 0;
-    animation: fade-in 1s linear 3.5s forwards;
+    animation: fade-in 1s linear 3s forwards;
     &:hover {
       color: #ff0088 !important;
     }
@@ -378,6 +378,7 @@ $outline: $pink;
 .chev-up-con {
   position: relative;
   font-size: 40px;
+  cursor: pointer;
   left: 50%;
   top: -20px;
   transform: translate(-50%, -50%);

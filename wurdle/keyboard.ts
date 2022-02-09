@@ -21,7 +21,6 @@ interface keyProps {
 function Key(props: keyProps) {
   const { label, onClick, used } = props;
 
-  console.log(label, used, used[label]);
   return h(
     `div.key .${used[label]}`,
     { onClick, style: { animationDelay: `${5 * 0.5}s` } },
