@@ -71,6 +71,7 @@ function Resume() {
       if (key == "skills") return;
       return h("div", [
         h(InfoBlock, { key: i, header: key }, [
+          //@ts-ignore
           value.map((infoChild: InfoChildI, j: number) => {
             return h(InfoChild, { key: j, ...infoChild });
           }),

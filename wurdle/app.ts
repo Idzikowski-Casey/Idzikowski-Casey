@@ -15,13 +15,15 @@ export default function Wurdle() {
 
   const onKeyUp = (e: KeyboardEvent) => {
     const char = e.key.toLocaleLowerCase();
-    console.log(state);
+    //@ts-ignore
     onKeyAction(char, dispatch, state);
   };
 
   useEffect(() => {
+    //@ts-ignore
     window.addEventListener("keyup", onKeyUp);
     return () => {
+      //@ts-ignore
       window.removeEventListener("keyup", onKeyUp);
     };
   }, [state.current]);

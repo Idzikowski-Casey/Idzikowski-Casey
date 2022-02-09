@@ -22,6 +22,7 @@ function Key(props: keyProps) {
   const { label, onClick, used } = props;
 
   return h(
+    //@ts-ignore
     `div.key .${used[label]}`,
     { onClick, style: { animationDelay: `${5 * 0.5}s` } },
     [props.label]
@@ -35,6 +36,7 @@ function KeyBoard({ state, dispatch }: keyBoardProps) {
         row.map((key, j) => {
           let label = key;
           if (key == "delete") {
+            //@ts-ignore
             label = h(IoBackspaceOutline);
           }
           const onClick = () => {

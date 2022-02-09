@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "next build && next export && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "next": "^12.0.10",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@macrostrat/hyper": "^2.0.1",
     "@types/react": "17.0.9",
+    "@types/react-scroll": "^1.8.3",
     "typescript": "4.3.2"
   }
 }

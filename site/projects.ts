@@ -26,9 +26,11 @@ function ProjectCard(props: ProjectCardI) {
       },
       ["View on Github"]
     ),
-    h.if(props.nextLink != undefined)(Link, { href: props.nextLink }, [
-      h("a.github-link", ["Demo"]),
-    ]),
+    h.if(props.nextLink != undefined)(
+      Link,
+      { href: props.nextLink||"", as: process.env.BACKEND_URL + props.nextLink },
+      [h("a.github-link", ["Demo"])]
+    ),
   ]);
 }
 
