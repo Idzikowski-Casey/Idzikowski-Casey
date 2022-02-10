@@ -135,7 +135,12 @@ $outline: $pink;
   .gradient {
     text-align: center;
   }
-  .chev-down,
+  .chev-down-con {
+    .chev-down {
+      opacity: 1;
+      animation: none;
+    }
+  }
   .title,
   .subtitle {
     width: 100%;
