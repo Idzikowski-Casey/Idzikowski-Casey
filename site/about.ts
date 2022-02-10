@@ -1,4 +1,3 @@
-import { FaDownload } from "react-icons/fa";
 import { hyperStyled } from "@macrostrat/hyper";
 import styles from "./site.module.scss";
 
@@ -38,10 +37,6 @@ function AccountBtns() {
   const linkden = "https://www.linkedin.com/in/casey-idzikowski-742858108/";
 
   return h("div.acn-btns", [
-    h("a.resume-btn", { target: "_blank", width: 125 }, [
-      h(FaDownload),
-      "Resume",
-    ]),
     h("a", { href: github, target: "_blank" }, [
       h("img", {
         src:
