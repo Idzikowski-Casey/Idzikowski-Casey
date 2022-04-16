@@ -10,6 +10,16 @@
     "github": "https://github.com/EarthCubeGeochron/Sparrow"
   },
   {
+    "title": "Psql Auth",
+    "description": "A proof of concept for creating a custom authorization system that is database centered. Includes several PSQL functions for an authentication API and Table Policies enforcing Row Level Security based on a custom web-user authorization schema.",
+    "github": "https://github.com/Idzikowski-Casey/psql-auth"
+  },
+  {
+    "title": "Macrostrat Web",
+    "description": "Macrostrat Web is the public facing side of Macrostrat. This interfect is the geographical visualization of geological data in Macrostrat, Paleobio-Database, and xDD. This interface highlights the power of community level data sharing and the possible visualizations.",
+    "github": "https://github.com/UW-Macrostrat/web"
+  },
+  {
     "title": "xDD Term Linkage",
     "description": "By harrnessing the power of xDD, this application allows users to link terms for a given paper. Through the interface a user can browse already tracked terms in xDD and search for new ones. Users can view terms in paper context using the xDD API.",
     "github": "https://github.com/Idzikowski-Casey/xdd_docs"
@@ -18,10 +28,5 @@
     "title": "Nook's Wurds",
     "description": "An animal crossing themed word guessing game inspired by Wordle. All code is original!",
     "nextLink": "/wurdle"
-  },
-  {
-    "title": "Macrostrat Web",
-    "description": "Macrostrat Web is the public facing side of Macrostrat. This interfect is the geographical visualization of geological data in Macrostrat, Paleobio-Database, and xDD. This interface highlights the power of community level data sharing and the possible visualizations.",
-    "github": "https://github.com/UW-Macrostrat/web"
   }
 ]

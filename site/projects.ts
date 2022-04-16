@@ -2,6 +2,8 @@ import { hyperStyled } from "@macrostrat/hyper";
 import styles from "./site.module.scss";
 import data from "./projects.json";
 import Link from "next/link";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import { useRef } from "react";
 
 const h = hyperStyled(styles);
 
@@ -28,19 +30,47 @@ function ProjectCard(props: ProjectCardI) {
     ),
     h.if(props.nextLink != undefined)(
       Link,
-      { href: props.nextLink||"", as: process.env.BACKEND_URL + props.nextLink },
+      {
+        href: props.nextLink || "",
+        as: props.nextLink,
+      },
       [h("a.github-link", ["Demo"])]
     ),
   ]);
 }
 
+function SideButton({ onClick, left }) {
+  //FaChevronRight
+  return h("div.chev-side-con", [
+    h("a.chev-down", { onClick }, [
+      left ? h(FaChevronLeft) : h(FaChevronRight),
+    ]),
+  ]);
+}
+
 function Projects() {
+  const ref = useRef(null);
+
+  const scrollProjects = (offset: number) => {
+    if (ref.current) {
+      ref.current.scrollLeft += offset;
+    }
+  };
+
   return h("div.projects-page", { id: "projects" }, [
     h("h3.projects-title", ["Check out my recent projects!"]),
-    h("div.projects-list", [
-      ProjectData.map((project, i) => {
-        return h(ProjectCard, { key: i, ...project });
-      }),
+    h("div.project-carrosel", [
+      h("div", [
+        h(SideButton, { onClick: () => scrollProjects(-400), left: true }),
+      ]),
+      h("div.projects-list", { ref }, [
+        ProjectData.map((project, i) => {
+          return h(ProjectCard, { key: i, ...project });
+        }),
+      ]),
+      h("div", [
+        h(SideButton, { onClick: () => scrollProjects(400), left: false }),
+      ]),
     ]),
   ]);
 }

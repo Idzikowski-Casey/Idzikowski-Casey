@@ -12,19 +12,19 @@
       "header": "Macrostrat, University of Wisconsin Madison",
       "subtitle": "Associate Research Specialist",
       "date": "February 2021 - Present",
-      "description": "As an Associate Research Specialist, I am applying my expertise in software development to solving data workflow problems. My responsibilities have grown to include updating existing codebases to industry standards and leading development on data acquisition interfaces and workflows."
+      "description": "As an Associate Research Specialist, I am applying my expertise in software development to solving data workflow problems. I am the lead developer on 2 full-stack web applications for streamlining data acquisition and I am leading database design on core data infrastructure. My responsibilities have grown to include updating existing codebases to industry standards and creating and maintaining coding libraries."
     },
     {
       "header": "Macrostrat, University of Wisconsin Madison",
       "subtitle": "Research Intern",
       "date": "May 2020 - February 2021",
-      "description": "As a research intern, I built upon my programming knowledge from my previous position. I taught myself JavaScript and React.js to begin frontend development of a lab-data management software called Sparrow, an NSF-funded project. My role as a developer quickly expanded beyond frontend to encompass a python backend Restful API, python-database workflows, and managing/editing a PostgreSQL database."
+      "description": "As a research intern, I built upon my programming knowledge from my previous position. With JavaScript and React.js I helped develop the frontend of a lab-data management software called Sparrow, an NSF-funded project. My role as a developer quickly expanded beyond frontend to encompass a python backend RestAPI, python-database workflows, and managing/editing a PostgreSQL database."
     },
     {
       "header": "Macrostrat, University of Wisconsin Madison",
       "subtitle": "Student Worker",
       "date": "May 2019 - May 2020",
-      "description": "As a Student Worker at the University of Wisconsin Madison, I was tasked with searching for and collecting metadata for geochronological samples processed at the WiscAr lab. In this position, I learned python for data science and performed data manipulations on the dataset I had collected."
+      "description": "As a Student Worker at the University of Wisconsin Madison, I used Python to analyze and manipulate a large dataset of archival metadata for geochemical lab. I collected my work into a set of jupyter notebooks which are now featured on the Sparrow documentation website."
     }
   ],
   "skills": {

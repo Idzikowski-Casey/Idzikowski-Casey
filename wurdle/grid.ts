@@ -16,10 +16,9 @@ function LetterBox({
   const l = letter.letter ? letter.letter.toUpperCase() : letter.letter;
   const letterClassName = letter.letter ? ".has-letter" : undefined;
   let colorClass: string = `.${letter.color}`;
-  const winClass = status == GAME_STATUS.WIN ? ".won" : undefined;
 
   return h(
-    `div.letter-box ${letterClassName} ${colorClass} ${winClass}`,
+    `div.letter-box ${letterClassName} ${colorClass}`,
     {
       style: {
         animationDelay:
