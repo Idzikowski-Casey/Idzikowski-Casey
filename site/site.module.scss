@@ -123,13 +123,7 @@ $outline: $pink;
 }
 @media screen and (max-width: 590px) {
   .tag-animate {
-    position: absolute;
-    top: 60%;
-    left: 0;
-    right: 0;
-    margin: 0;
-    width: 100%;
-    animation: flicker 1s infinite;
+    display: none;
   }
   .gradient {
     text-align: center;
