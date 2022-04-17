@@ -27,7 +27,10 @@ function IconLink(props: IconLink) {
 
 export function Header() {
   return h("div.header", [
-    h(IconLink, { icon: h(AiFillHome), link: "/" }),
+    h(IconLink, {
+      icon: h(AiFillHome),
+      link: process.env.NEXT_PUBLIC_BASE_URL,
+    }),
     h("h1", ["Nook's Wurds"]),
     h("div", [
       h(IconBtn, { icon: h(IoPodiumOutline), onClick: () => {} }),
