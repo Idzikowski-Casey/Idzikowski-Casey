@@ -1,4 +1,5 @@
 import { ReactChild, useEffect, useState } from "react";
+import Link from "next/link";
 import { hyperStyled } from "@macrostrat/hyper";
 import { Button, Dialog, IDialogProps } from "@blueprintjs/core";
 import styles from "./wurdle.module.scss";
@@ -17,8 +18,10 @@ const DialogProps: Partial<IDialogProps> = {
 };
 
 function PlayAgainButton() {
-  return h(Button, { onClick: () => window.location.reload() }, [
-    h("h2", ["Play again?"]),
+  return h(Link, { href: "/wurdle", as: "/wurdle" }, [
+    h(Button, { onClick: () => window.location.reload() }, [
+      h("h2", ["Play again?"]),
+    ]),
   ]);
 }
 
