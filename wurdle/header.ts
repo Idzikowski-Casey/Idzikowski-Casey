@@ -25,12 +25,16 @@ function IconLink(props: IconLink) {
   return h(Link, { href: props.link }, [h("button.icon", [props.icon])]);
 }
 
+function HomeButton() {
+  return h(IconLink, {
+    icon: h(AiFillHome),
+    link: process.env.NEXT_PUBLIC_BASE_URL,
+  });
+}
+
 export function Header() {
   return h("div.header", [
-    h(IconLink, {
-      icon: h(AiFillHome),
-      link: process.env.NEXT_PUBLIC_BASE_URL,
-    }),
+    h(HomeButton),
     h("h1", ["Wurdle(clone)"]),
     h("div", [
       h(IconBtn, { icon: h(IoPodiumOutline), onClick: () => {} }),
@@ -38,3 +42,5 @@ export function Header() {
     ]),
   ]);
 }
+
+export { HomeButton };

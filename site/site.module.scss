@@ -164,6 +164,10 @@ $outline: $pink;
     color: #ff43a7 !important;
     transition: color 0.2s;
   }
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
 }
 .activeLink {
   color: #ff43a7 !important;
@@ -276,7 +280,7 @@ $outline: $pink;
 
 .subtitle-date {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   color: rgb(85, 85, 85);
 }
 
@@ -352,6 +356,9 @@ $outline: $pink;
   background: rgb(255, 255, 255);
   padding: 15px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .projects-page {
@@ -380,13 +387,18 @@ $outline: $pink;
     transition: color 0.3s;
   }
 }
-
-.github-link {
-  position: absolute;
-  bottom: 20px;
+.githuhb-link-container {
+  display: flex;
+  justify-content: space-between;
   color: $pink;
-  &:hover {
-    color: $darkblue;
+  .github-link {
+    &:hover {
+      color: $darkblue !important;
+    }
+  }
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
   }
 }
 

@@ -22,7 +22,8 @@
   {
     "title": "xDD Term Linkage",
     "description": "By harrnessing the power of xDD, this application allows users to link terms for a given paper. Through the interface a user can browse already tracked terms in xDD and search for new ones. Users can view terms in paper context using the xDD API.",
-    "github": "https://github.com/Idzikowski-Casey/xdd_docs"
+    "github": "https://github.com/Idzikowski-Casey/xdd_docs",
+    "nextLink": "/xdd"
   },
   {
     "title": "Wurlde Clone",

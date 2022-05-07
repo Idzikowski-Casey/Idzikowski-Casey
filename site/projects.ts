@@ -18,24 +18,28 @@ const ProjectData: ProjectCardI[] = data;
 
 function ProjectCard(props: ProjectCardI) {
   return h("div.project-card", [
-    h("h3", [props.title]),
-    h("p.info-description", [props.description]),
-    h.if(props.github != undefined)(
-      "a.github-link",
-      {
-        href: props.github,
-        target: "_blank",
-      },
-      ["View on Github"]
-    ),
-    h.if(props.nextLink != undefined)(
-      Link,
-      {
-        href: props.nextLink || "",
-        as: props.nextLink,
-      },
-      [h("a.github-link", ["Demo"])]
-    ),
+    h("div", [
+      h("h3", [props.title]),
+      h("p.info-description", [props.description]),
+    ]),
+    h("div.githuhb-link-container", [
+      h.if(props.github != undefined)(
+        "a.github-link",
+        {
+          href: props.github,
+          target: "_blank",
+        },
+        ["View on Github"]
+      ),
+      h.if(props.nextLink != undefined)(
+        Link,
+        {
+          href: props.nextLink || "",
+          as: props.nextLink,
+        },
+        [h("a.github-link", ["Demo"])]
+      ),
+    ]),
   ]);
 }
 
