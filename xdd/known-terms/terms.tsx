@@ -68,6 +68,7 @@ function filterTerms(terms, filter) {
   let filteredTerms = {};
   // known terms is a object of lists
   Object.entries(terms).map(([key, value], i) => {
+    //@ts-ignore
     value.map((word) => {
       if (word.toLowerCase().includes(filter.toLowerCase())) {
         filteredTerms[key] = [...get(filteredTerms, key, []), word];
