@@ -43,7 +43,10 @@ export default function Wurdle() {
   return h("div.app-container", [
     h(Header),
     h(WinDialog, { isOpen: state.status == GAME_STATUS.WIN }),
-    h(LooseDialog, { isOpen: state.status == GAME_STATUS.LOSE }),
+    h(LooseDialog, {
+      isOpen: state.status == GAME_STATUS.LOSE,
+      word: state.word,
+    }),
     h(`div.letters`, { onKeyUp: onKeyUp }, [
       state.grid.map((row, j) => {
         return h("div.row", { key: j }, [

@@ -46,10 +46,14 @@ function WinDialog({ isOpen }: { isOpen: boolean }) {
   ]);
 }
 
-function LooseDialog({ isOpen }: { isOpen: boolean }) {
+function LooseDialog({ isOpen, word }: { isOpen: boolean; word: string }) {
   return h(BaseDialog, { isOpen }, [
     h("div.dialog-container", [
       h("h2", { style: { color: "#AC2F33" } }, ["You Lost! Major Bummer"]),
+      h("h3", [
+        "The word was ",
+        h("span", { style: { color: "#215DB0" } }, [word]),
+      ]),
       h(PlayAgainButton),
     ]),
   ]);
