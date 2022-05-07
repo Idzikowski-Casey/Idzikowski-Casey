@@ -47,15 +47,22 @@ type ADD_LETTER = { type: "add-letter"; letter: string };
 type REMOVE_LETTER = { type: "remove-letter" };
 type CHECK_CURRENT = { type: "check-current" };
 type UPDATE_STATUS = { type: "update-status"; status: GAME_STATUS };
+type SET_WORD = { type: "set-word"; word: string };
 
 export type WurdleActions =
   | ADD_LETTER
   | REMOVE_LETTER
   | CHECK_CURRENT
-  | UPDATE_STATUS;
+  | UPDATE_STATUS
+  | SET_WORD;
 
 export const WurdlerReducer = (state: WurdleState, action: WurdleActions) => {
   switch (action.type) {
+    case "set-word":
+      return {
+        ...state,
+        word: action.word,
+      };
     case "add-letter":
       // add letter to end of grid.
       const g = JSON.parse(JSON.stringify(state.grid));

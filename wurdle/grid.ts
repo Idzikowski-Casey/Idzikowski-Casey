@@ -22,7 +22,7 @@ function LetterBox({
     {
       style: {
         animationDelay:
-          letter.color != BoxColor.WHITE ? `${order * 0.5}s` : "0s",
+          letter.color != BoxColor.WHITE ? `${order * 0.4}s` : "0s",
       },
     },
     [l]

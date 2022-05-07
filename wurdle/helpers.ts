@@ -63,17 +63,15 @@ const onKeyAction = (
   ) {
     dispatch({ type: "add-letter", letter: char });
   } else if (char.toLocaleLowerCase() === "backspace") {
-    console.log("delete letter");
     dispatch({ type: "remove-letter" });
   } else if (
     char === "enter" &&
     state.grid[state.current[0]][state.current[1]].letter != null
   ) {
     if (state.current[0] == 5) {
-      console.log("game over");
+      dispatch({ type: "check-current" });
       dispatch({ type: "update-status", status: GAME_STATUS.LOSE });
     } else {
-      console.log("enter has been pressed");
       dispatch({ type: "check-current" });
     }
   }

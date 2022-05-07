@@ -28,6 +28,13 @@
   border-color: #787c7e;
 }
 
+.dialog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
 @keyframes quick-scale {
   0% {
     transform: scale(1);
@@ -44,14 +51,10 @@ $wordle-gray: #787c7e;
 $wordle-green: #6aaa64;
 $wordle-yellow: #c9b458;
 
-$ac-brown: #c48d3f;
-$ac-green: #9dffb0;
-$ac-yellow: #fff563;
-
 $colors: (
-  "gray": $ac-brown,
-  "green": $ac-green,
-  "yellow": $ac-yellow,
+  "gray": $wordle-gray,
+  "green": $wordle-green,
+  "yellow": $wordle-yellow,
 );
 
 @each $name, $color in $colors {
@@ -70,27 +73,10 @@ $colors: (
       -webkit-transform: rotateX(0deg);
       background-color: $color;
       border-color: $color;
-      color: rgb(102, 102, 102);
+      color: rgb(255, 255, 255);
     }
   }
 }
-
-// @keyframes win-jump {
-//   0% {
-//     transform: translateY(0px);
-//   }
-//   50% {
-//     transform: translateY(-10px);
-//   }
-//   100% {
-//     transform: translateY(0px);
-//   }
-// }
-
-// .won {
-//   animation: win-jump 0.5s ease-in-out 3s 1;
-//   animation-delay: 3s;
-// }
 
 .row {
   display: grid;

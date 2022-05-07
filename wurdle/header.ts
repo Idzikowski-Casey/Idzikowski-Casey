@@ -31,7 +31,7 @@ export function Header() {
       icon: h(AiFillHome),
       link: process.env.NEXT_PUBLIC_BASE_URL,
     }),
-    h("h1", ["Nook's Wurds"]),
+    h("h1", ["Wurdle(clone)"]),
     h("div", [
       h(IconBtn, { icon: h(IoPodiumOutline), onClick: () => {} }),
       h(IconBtn, { icon: h(ImCog), onClick: () => {} }),

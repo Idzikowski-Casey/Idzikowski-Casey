@@ -25,8 +25,8 @@
     "github": "https://github.com/Idzikowski-Casey/xdd_docs"
   },
   {
-    "title": "Nook's Wurds",
-    "description": "An animal crossing themed word guessing game inspired by Wordle. All code is original!",
+    "title": "Wurlde Clone",
+    "description": "A clone of the very popular word guessing game Wordle! All code is original!",
     "nextLink": "/wurdle"
   }
 ]

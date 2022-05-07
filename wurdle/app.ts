@@ -6,8 +6,11 @@ import styles from "./wurdle.module.scss";
 import { LetterBox } from "../wurdle";
 import { WurdlerReducer, WurdleDefaultState, GAME_STATUS } from "./reducer";
 import { onKeyAction } from "./helpers";
+import { WinDialog, LooseDialog } from "./dialogs";
 
 const h = hyperStyled(styles);
+
+const randomWordAPI = "https://random-word-api.herokuapp.com/word?length=5";
 
 export default function Wurdle() {
   //@ts-ignore
@@ -28,11 +31,22 @@ export default function Wurdle() {
     };
   }, [state.current]);
 
+  useEffect(() => {
+    const getWord = async () => {
+      const res = await fetch(randomWordAPI);
+      const word = await res.json();
+      dispatch({ type: "set-word", word: word[0] });
+    };
+    getWord();
+  }, []);
+
   return h("div.app-container", [
     h(Header),
-    h("div.letters", { onKeyUp: onKeyUp }, [
+    h(WinDialog, { isOpen: state.status == GAME_STATUS.WIN }),
+    h(LooseDialog, { isOpen: state.status == GAME_STATUS.LOSE }),
+    h(`div.letters`, { onKeyUp: onKeyUp }, [
       state.grid.map((row, j) => {
-        return h("div.row", [
+        return h("div.row", { key: j }, [
           row.map((l, i) => {
             return h(LetterBox, {
               key: i,
