@@ -47,7 +47,7 @@ type SyncAppActions =
 type AsyncAppActions = fetch_known_terms | fetch_paper_meta;
 
 export interface appCTX {
-  state: {};
+  state: stateCTX;
   runAction(action: SyncAppActions | AsyncAppActions): Promise<void>;
 }
 
@@ -160,13 +160,13 @@ const appReducer = (state = defaultState, action: SyncAppActions) => {
       let term = action.payload.snippet_term;
       let recentTerms = state.recent_terms;
       let terms_ = new Set([...recentTerms, term]);
-      terms_ = [...terms_];
-      if (terms_.length > 6) {
-        terms_.shift();
+      const _terms = Array.from(terms_.values());
+      if (_terms.length > 6) {
+        _terms.shift();
       }
       return {
         ...state,
-        recent_terms: terms_,
+        recent_terms: _terms,
       };
     default:
       throw new Error("What does this mean?");
@@ -195,6 +195,7 @@ function AppContextProvider(props) {
   }, [state.docid]);
 
   return (
+    //@ts-ignore
     <AppContext.Provider value={{ state, runAction }}>
       {props.children}
     </AppContext.Provider>

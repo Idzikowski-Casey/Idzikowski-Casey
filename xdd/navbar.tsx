@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Button, Navbar } from "@blueprintjs/core";
 import { Tooltip2 } from "@blueprintjs/popover2";
 import { AppContext } from ".";
+import { appCTX } from "./context";
 
 function BackArrow() {
   const { state, runAction } = useContext(AppContext);
@@ -21,7 +22,7 @@ function BackArrow() {
 }
 
 function LinkPageNavbar() {
-  const { state, runAction } = useContext(AppContext);
+  const { state, runAction } = useContext<appCTX>(AppContext);
   const { paper, docid } = state;
   const { title, url, doi, year, publisher, journal } = paper;
 
