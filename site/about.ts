@@ -39,15 +39,13 @@ function AccountBtns() {
   return h("div.acn-btns", [
     h("a", { href: github, target: "_blank" }, [
       h("img", {
-        src:
-          "https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white",
+        src: "https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white",
         width: 125,
       }),
     ]),
     h("a", { href: linkden, target: "_blank" }, [
       h("img", {
-        src:
-          "https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white",
+        src: "https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white",
         width: 125,
       }),
     ]),
@@ -56,7 +54,7 @@ function AccountBtns() {
 
 function MyImage() {
   return h("img.profile-pic", {
-    src: "profilepic.png",
+    src: process.env.NEXT_PUBLIC_BASE_URL + "/profilepic.png",
     alt: "profile-pic",
   });
 }

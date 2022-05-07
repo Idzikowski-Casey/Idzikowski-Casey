@@ -28,7 +28,7 @@ function IconLink(props: IconLink) {
 function HomeButton() {
   return h(IconLink, {
     icon: h(AiFillHome),
-    link: process.env.NEXT_PUBLIC_BASE_URL,
+    link: "/",
   });
 }
 
