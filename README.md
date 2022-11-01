@@ -3,9 +3,9 @@
 
 ## [Hello 👋](https://idzikowski-casey.github.io/Idzikowski-Casey/)
 
-I have over 2 years of working experience designing and developing full-stack web applications. My recent work with the [Macrostrat Group](https://macrostrat.org/), has been in designing and creating informatic systems, data acquisition interfaces, and improving application-to-database data pipeline infrastructure.
+I am a software engineer with experience working on full-stack applications and mobile applications (android). Professionally, I'm passionate about constantly learning new technologies, techniques, or algorithms that will make the programs I write faster, more scalable, and more maintainable.
 
-- 🔭 I’m currently working on Fullstack applications (React, Python, PostgreSQL)
+- 🔭 I’m currently working on android mobile applications
 - 📫 How to reach me: idzikowski.casey@gmail.com
 - 😄 Pronouns: He/Him
 - ⚡ Fun fact: My undergraduate major was Geology 🌋
