@@ -5,10 +5,7 @@
 
 I have over 2 years of working experience designing and developing full-stack web applications. My recent work with the [Macrostrat Group](https://macrostrat.org/), has been in designing and creating informatic systems, data acquisition interfaces, and improving application-to-database data pipeline infrastructure.
 
-- 🔭 I’m currently working on Macrostrat-Web, Sparrow, Column-Topology
-- 🌱 I’m currently learning algorithms and scalability.
-- 👯 I’m looking to collaborate on open source library development.
-- 🤔 I’m looking for help with professional development.
+- 🔭 I’m currently working on Fullstack applications (React, Python, PostgreSQL)
 - 📫 How to reach me: idzikowski.casey@gmail.com
 - 😄 Pronouns: He/Him
 - ⚡ Fun fact: My undergraduate major was Geology 🌋
