@@ -5,20 +5,20 @@ const h = hyperStyled(styles);
 
 function Description() {
   return h("p", [
-    "I am a software developer with over 2 years\
+    "I am a software engineer with multiple years\
          of working experience developing full-stack \
-         web applications. As a developer at ",
+         web applications and android native apps. As a developer at ",
     h(
       "a.macrostrat-link",
-      { href: "https://macrostrat.org/", target: "_blank" },
-      ["Macrostrat"]
+      { href: "https://www.audible.com/", target: "_blank" },
+      ["Audible"]
     ),
-    " I am part of a small team which has \
-         allowed me to gain knowledge and insight\
-          into every aspect of application development.\
-        Although my work has encompassed frontend, \
-        backend, testing, and even DevOps, my \
-        passion lies in solving complex logic problems with scalable solutions.",
+    " I am expanding upon my skills and knowledge. \
+    Professionally, I'm passionate about constantly \
+    learning new technologies, techniques, or algorithms \
+    that will make the programs I write faster, more \
+    scalable, and more maintainable.\
+    ",
   ]);
 }
 

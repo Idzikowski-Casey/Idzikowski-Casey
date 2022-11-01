@@ -17,7 +17,7 @@ function TitlePage() {
   return h("div.gradient", { id: "title" }, [
     h("div", [
       h("h1.title", ["casey idzikowski", h("span.tag-animate", ["</>"])]),
-      h("h2.subtitle", ["Software Developer"]),
+      h("h2.subtitle", ["Software Engineer"]),
     ]),
     h(DownButton),
   ]);

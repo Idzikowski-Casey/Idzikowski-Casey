@@ -9,9 +9,15 @@
   ],
   "work": [
     {
+      "header": "Audible, an Amazon company",
+      "subtitle": "Software Development Engineer I",
+      "date": "August 2022 - Present",
+      "description": "At Audible, I am working as a software development engineer, mainly as an Android developer. I am gaining the skills and knowledge to grow my career."
+    },
+    {
       "header": "Macrostrat, University of Wisconsin Madison",
       "subtitle": "Associate Research Specialist",
-      "date": "February 2021 - Present",
+      "date": "February 2021 - July 2022",
       "description": "As an Associate Research Specialist, I am applying my expertise in software development to solving data workflow problems. I am the lead developer on 2 full-stack web applications for streamlining data acquisition and I am leading database design on core data infrastructure. My responsibilities have grown to include updating existing codebases to industry standards and creating and maintaining coding libraries."
     },
     {
@@ -28,8 +34,15 @@
     }
   ],
   "skills": {
-    "Languages": ["TypeScript", "Python", "JavaScript", "PostgreSQL", "HTML"],
-    "Frameworks": ["ReactJS", "NextJS", "FastAPI"],
+    "Languages": [
+      "Kotlin",
+      "TypeScript",
+      "Python",
+      "JavaScript",
+      "PostgreSQL",
+      "HTML"
+    ],
+    "Frameworks": ["Android", "ReactJS", "NextJS", "FastAPI"],
     "Styling": ["CSS", "SASS", "Stylus"],
     "Tools": ["GIT", "Docker"]
   }
