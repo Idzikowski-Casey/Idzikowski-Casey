@@ -7,14 +7,16 @@ function Description() {
   return h("p", [
     "I am a software engineer with multiple years\
          of working experience developing full-stack \
-         web applications and android native apps. As a developer at ",
+         web applications and native android apps. As a developer at ",
     h(
       "a.macrostrat-link",
       { href: "https://www.audible.com/", target: "_blank" },
       ["Audible"]
     ),
-    " I am expanding upon my skills and knowledge. \
-    Professionally, I'm passionate about constantly \
+    " I am expanding upon my skills and knowledge. Working \
+    on the core android app, I am passionate about delivering \
+    customer facing features and leading the developement and deployment lifecycle. \
+    Professionally, I'm excited about constantly \
     learning new technologies, techniques, or algorithms \
     that will make the programs I write faster, more \
     scalable, and more maintainable.\
@@ -54,7 +56,7 @@ function AccountBtns() {
 
 function MyImage() {
   return h("img.profile-pic", {
-    src: process.env.NEXT_PUBLIC_BASE_URL + "/profilepic.png",
+    src: process.env.NEXT_PUBLIC_BASE_URL + "/profile-v2.png",
     alt: "profile-pic",
   });
 }

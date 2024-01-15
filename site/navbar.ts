@@ -14,7 +14,7 @@ function NavLink(props: NavI) {
     h(
       Link,
       {
-        activeClass: props.title == "home" ? undefined : styles.activeLink,
+        activeClass: styles.activeLink,
         to: props.to,
         smooth: true,
         spy: true,
