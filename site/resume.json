@@ -1,18 +1,10 @@
 {
-  "education": [
-    {
-      "header": "University of Wisconsin Madison",
-      "subtitle": "B.S Geosciences",
-      "date": "May 2020",
-      "description": "At the University of Wisconsin-Madison, I assisted a then Ph.D. candidate, now Postdoc, in a 6 week long geologic field season in Western Australia. This fieldwork led to 2 years of independent undergraduate research culminating in a poster presentation at Geologic Society of America 2019. Studying geoscience has provided me with a strong interdisciplinary education."
-    }
-  ],
   "work": [
     {
       "header": "Software Development Engineer I, II",
       "subtitle": "Audible, an Amazon company",
       "date": "August 2022 - Present",
-      "description": "At Audible, I am working as a software engineer, developing the core Android app experience. Promoted to SDE II in Q4 of 2023, I am learning as much as possible and applying my skills to get stuff done."
+      "description": "At Audible, I am working as a software engineer, developing the core Android app experience. Promoted to SDE II in Q4 of 2023, I am focusing on ways to improve App architecture by adopting industry best practices and tools (e.g unidirectional data flow, server driven UI, Jetpack Compose). My other main area of focus is improving and building upon the in-app purchasing experience."
     },
     {
       "header": "Associate Research Specialist",
@@ -31,6 +23,14 @@
       "subtitle": "Macrostrat, University of Wisconsin Madison",
       "date": "May 2019 - May 2020",
       "description": "As a Student Worker at the University of Wisconsin Madison, I used Python to analyze and manipulate a large dataset of archival metadata for geochemical lab. I collected my work into a set of jupyter notebooks which are now featured on the Sparrow documentation website."
+    }
+  ],
+  "education": [
+    {
+      "header": "University of Wisconsin Madison",
+      "subtitle": "B.S Geosciences",
+      "date": "May 2020",
+      "description": "At the University of Wisconsin-Madison, I assisted a then Ph.D. candidate, now Postdoc, in a 6 week long geologic field season in Western Australia. This fieldwork led to 2 years of independent undergraduate research culminating in a poster presentation at Geologic Society of America 2019. Studying geoscience has provided me with a strong interdisciplinary education."
     }
   ],
   "skills": {
