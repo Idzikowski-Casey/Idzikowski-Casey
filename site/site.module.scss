@@ -152,7 +152,6 @@ $outline: $pink;
   top: 0px;
   z-index: 100;
 }
-.active-link,
 .nav-item {
   cursor: pointer;
   font-weight: bold;
@@ -163,10 +162,10 @@ $outline: $pink;
   &:hover {
     color: #ff43a7 !important;
     transition: color 0.2s;
-  }
-  a {
-    color: inherit !important;
-    text-decoration: none !important;
+    a {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
   }
 }
 .activeLink {

@@ -18,6 +18,7 @@ function NavLink(props: NavI) {
         to: props.to,
         smooth: true,
         spy: true,
+        offset: -50  
       },
       [props.title]
     ),
