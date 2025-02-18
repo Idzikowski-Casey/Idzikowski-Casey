@@ -18,7 +18,8 @@
   {
     "title": "Macrostrat Web",
     "description": "Macrostrat Web is the public facing side of Macrostrat. This interfect is the geographical visualization of geological data in Macrostrat, Paleobio-Database, and xDD. This interface highlights the power of community level data sharing and the possible visualizations.",
-    "github": "https://github.com/UW-Macrostrat/web"
+    "github": "https://github.com/UW-Macrostrat/web",
+    "site": "https://macrostrat.org/map"
   },
   {
     "title": "BirdsEye",
@@ -29,6 +30,6 @@
     "title": "Sparrow",
     "description": "Sparrow is a data system for geochemical labs. Sparrow provides tools for labs to manage their data and its geological context. It also provides interfaces to allow third parties (community archives or Earth models) to request data directly from the labs.",
     "github": "https://github.com/EarthCubeGeochron/Sparrow",
-    "documentation": "https://sparrow-data.org/"
+    "site": "https://sparrow-data.org/"
   }
 ]

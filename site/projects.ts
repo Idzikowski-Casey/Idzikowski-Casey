@@ -12,7 +12,7 @@ interface ProjectCardI {
   description: string;
   github?: string;
   nextLink?: string;
-  documentation?: string;
+  site?: string;
 }
 
 const ProjectData: ProjectCardI[] = data;
@@ -40,13 +40,13 @@ function ProjectCard(props: ProjectCardI) {
         },
         [h("a.github-link", ["Demo"])]
       ),
-      h.if(props.documentation != undefined)(
+      h.if(props.site != undefined)(
         "a.github-link",
         {
-          href: props.documentation || "",
+          href: props.site || "",
           target: "_blank",
         },
-        [h("a.github-link", ["Docs"])]
+        [h("a.github-link", ["Website"])]
       ),
     ]),
   ]);

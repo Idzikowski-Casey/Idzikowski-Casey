@@ -5,9 +5,9 @@ const h = hyperStyled(styles);
 
 function Description() {
   return h("p", [
-    "I am a software engineer with multiple years\
-         of working experience developing full-stack \
-         web applications and native Android apps. As a developer at ",
+    "I am a software engineer with 5+ years\
+         of experience developing full-stack \
+         web applications and native Android apps. As a current developer at ",
     h(
       "a.macrostrat-link",
       { href: "https://www.audible.com/", target: "_blank" },
