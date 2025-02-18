@@ -12,6 +12,7 @@ interface ProjectCardI {
   description: string;
   github?: string;
   nextLink?: string;
+  documentation?: string;
 }
 
 const ProjectData: ProjectCardI[] = data;
@@ -38,6 +39,14 @@ function ProjectCard(props: ProjectCardI) {
           as: props.nextLink,
         },
         [h("a.github-link", ["Demo"])]
+      ),
+      h.if(props.documentation != undefined)(
+        "a.github-link",
+        {
+          href: props.documentation || "",
+          target: "_blank",
+        },
+        [h("a.github-link", ["Docs"])]
       ),
     ]),
   ]);

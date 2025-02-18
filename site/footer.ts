@@ -1,11 +1,5 @@
 import { hyperStyled } from "@macrostrat/hyper";
-import {
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTwitter,
-  FaChevronUp,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaChevronUp } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { IconType } from "react-icons/lib";
 import styles from "./site.module.scss";
@@ -21,15 +15,11 @@ function UpButton() {
 }
 
 const github = "https://github.com/Idzikowski-Casey";
-const insta = "https://www.instagram.com/casey_idz/";
 const linkden = "https://www.linkedin.com/in/casey-idzikowski-742858108/";
-const twitter = "https://twitter.com/casey_idz";
 
 const links: IconLinkI[] = [
   { link: github, icon: FaGithub },
   { link: linkden, icon: FaLinkedinIn },
-  { link: insta, icon: FaInstagram },
-  { link: twitter, icon: FaTwitter },
 ];
 
 const CopyWright = () =>

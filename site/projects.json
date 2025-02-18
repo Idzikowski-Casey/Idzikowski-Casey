@@ -1,6 +1,6 @@
 [
   {
-    "title": "Psql Auth",
+    "title": "PSQL Auth",
     "description": "A proof of concept for creating a custom authorization system that is database centered. Includes several PSQL functions for an authentication API and Table Policies enforcing Row Level Security based on a custom web-user authorization schema.",
     "github": "https://github.com/Idzikowski-Casey/psql-auth"
   },
@@ -28,6 +28,7 @@
   {
     "title": "Sparrow",
     "description": "Sparrow is a data system for geochemical labs. Sparrow provides tools for labs to manage their data and its geological context. It also provides interfaces to allow third parties (community archives or Earth models) to request data directly from the labs.",
-    "github": "https://github.com/EarthCubeGeochron/Sparrow"
+    "github": "https://github.com/EarthCubeGeochron/Sparrow",
+    "documentation": "https://sparrow-data.org/"
   }
 ]

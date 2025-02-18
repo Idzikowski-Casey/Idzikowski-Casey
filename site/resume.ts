@@ -5,25 +5,10 @@ import data from "./resume.json";
 
 const h = hyperStyled(styles);
 
-// interface ResumeDataI {
-//   education: InfoChildI[];
-//   work: InfoChildI[];
-// }
-
 interface InfoBlockI {
   header: string;
   children: ReactChild;
 }
-
-const info: InfoChildI[] = [
-  {
-    header: "University of Wisconsin Madison",
-    subtitle: "B.S Geosciences",
-    date: "May 2020",
-    description:
-      "At the University of Wisconsin-Madison, I assisted a then Ph.D. candidate, now Postdoc, in a 6 week long geologic field season in Western Australia. This fieldwork led to 2 years of independent undergraduate research culminating in a poster presentation at Geologic Society of America 2019. Studying geoscience has provided me with a strong interdisciplinary education.",
-  },
-];
 
 interface InfoChildI {
   header: string;
