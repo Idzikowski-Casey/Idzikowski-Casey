@@ -3,7 +3,6 @@ import styles from "./wurdle.module.scss";
 import { IoBackspaceOutline } from "react-icons/io5";
 import { WurdleState, WurdleActions, UsedLetter } from "./reducer";
 import { keys, onKeyAction } from "./helpers";
-import { IconType } from "react-icons/lib";
 
 const h = hyperStyled(styles);
 
@@ -13,7 +12,7 @@ interface keyBoardProps {
 }
 
 interface keyProps {
-  label: string | IconType;
+  label: string;
   onClick: (e: any) => void;
   used: UsedLetter;
 }
