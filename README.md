@@ -12,8 +12,8 @@ I am a software engineer with experience working on full-stack applications and 
 
 <h2>Technologies I use</h2>
 <p>
-  <img src="https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white" alt="Android"/>
-  <img src="https://img.shields.io/badge/Kotlin-%237F52FF.svg?logo=kotlin&logoColor=white" alt="Kotlin"/>
+  <img src="https://img.shields.io/badge/Android-3DDC84?logo=android&style=for-the-badge&logoColor=white" alt="Android"/>
+  <img src="https://img.shields.io/badge/Kotlin-%237F52FF.svg?logo=kotlin&style=for-the-badge&logoColor=white" alt="Kotlin"/>
   <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
   <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python"/>
   <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript"/>
