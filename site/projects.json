@@ -1,5 +1,10 @@
 [
   {
+    "title": "TasksApp",
+    "description": "A simple task management app that explores some modern architectures and best practices. In this app I'm testing out Anvil + Dagger over Hilt + Dagger and testing out some design patterns to implement scalable unidirectional data flow in the UI.",
+    "github": "https://github.com/Idzikowski-Casey/TasksApp"
+  },
+  {
     "title": "PSQL Auth",
     "description": "A proof of concept for creating a custom authorization system that is database centered. Includes several PSQL functions for an authentication API and Table Policies enforcing Row Level Security based on a custom web-user authorization schema.",
     "github": "https://github.com/Idzikowski-Casey/psql-auth"
